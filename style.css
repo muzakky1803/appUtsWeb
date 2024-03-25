@@ -1,0 +1,163 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 600px;
+    background: url('bg.jpeg');
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.Login{
+    background-color: #000;
+    width: 350px;
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.Login h2{
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    margin: 0 0 20px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.Login .input-group{
+    position: relative;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.Login .input-group input{
+    height: 50px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    font-size: 18px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.Login .input-group span{
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    padding: 0px;
+    text-transform: capitalize;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+.Login .input-group input:focus ~ span,
+.Login .input-group input:valid ~ span{
+    top: -12px;
+    Left: 20px;
+    font-size: 12px;
+    background-color: #A9A9A9;
+    padding: 2px 4px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.Login .input-group input[type="submit"]{
+    background-color: orange;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    width: 35%;
+    transition: 0.5%;
+}
+
+.Login .input-group input[type="submit"]:hover{
+    width: 100%;
+    background-color: rgba(255,0,0,0.5);
+    color: #fff;
+}
+
+
+
+/* style.css */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('bg.jpeg');
+    
+  }
+  
+  .order-form {
+    width: 400px;
+    margin: 50px auto;
+    background: #000;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-form h2 {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #fffffe; 
+  }
+  
+  .order-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .order-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1em;
+    background-color: #f5f5f5; 
+    border-radius: 5px;
+    transition: 0.3s ease-in-out all; 
+  }
+  
+  .order-items li:hover {
+    background-color: #eee; 
+    box-sizing: border-box;
+  }
+  
+  .order-items li:last-child {
+    border-bottom: none;
+  }
+  
+  .order-items li input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #f7931a; 
+  }
+  
+  .order-items li label {
+    width: 60%;
+  }
+  
+  .price {
+    font-weight: bold;
+    color: #000; 
+  }
+  
+  .total {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+  .total span {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #f5f5f5; 
+  }
+  

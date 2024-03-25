@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Form</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+  <div class="order-form">
+    <h2>Order Form</h2>
+    <ul class="order-items">
+      <li>
+        <input type="checkbox" id="Mie Ayam" value="Mie ayam">
+        <label for="Mie ayam">Mie ayam</label>
+        <span class="price">Rp 12000</span>
+      </li>
+      <li>
+        <input type="checkbox" id="Mie ayam bakso" value="Mie ayam bakso">
+        <label for="Mie ayam bakso">Mie ayam bakso</label>
+        <span class="price">Rp 15000</span>
+      </li>
+      <li>
+        <input type="checkbox" id="Mie ayam komplit" value="Mie ayam komplit">
+        <label for="Mie ayam komplit">Mie ayam komplit</label>
+        <span class="price">Rp 18000</span>
+      </li>
+      <li>
+        <input type="checkbox" id="Es teh/Teh hangat" value="Es teh/Teh hangat">
+        <label for="Es teh/Teh hangat">Es teh/Teh hangat</label>
+        <span class="price">Rp 3000</span>
+      </li>
+      <li>
+        <input type="checkbox" id="Kopi" value="Kopi">
+        <label for="Kopi">Kopi</label>
+        <span class="price">Rp 3000</span>
+      </li>
+      <li>
+        <input type="checkbox" id="Aneka jus" value="Aneka jus">
+        <label for="Aneka jus">Aneka jus</label>
+        <span class="price">Rp 10000</span>
+      </li>
+    </ul>
+    <div class="total">
+      Total: <span id="total">Rp 0</span>
+    </div>
+  </div>
+  <script>
+    const orderItems = document.querySelectorAll('.order-items input[type="checkbox"]');
+    const totalElement = document.getElementById('total');
+
+    orderItems.forEach(item => {
+      item.addEventListener('change', function() {
+        let total = 0;
+        orderItems.forEach(checkedItem => {
+          if (checkedItem.checked) {
+            const price = parseInt(checkedItem.parentNode.querySelector('.price').textContent.replace('Rp ', ''));
+            total += price;
+          }
+        });
+        totalElement.textContent = `Rp ${total}`;
+      });
+    });
+  </script>
+</body>
+</html>
